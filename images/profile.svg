@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 640" role="img" aria-labelledby="title desc">
+  <title id="title">노트북 앞에서 작업하는 개발자</title><desc id="desc">파란색과 보라색 계열의 현대적인 개발자 일러스트</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcecff"/><stop offset="1" stop-color="#d8d0ff"/></linearGradient><linearGradient id="shirt" x1="0" x2="1"><stop stop-color="#7065dd"/><stop offset="1" stop-color="#554bc4"/></linearGradient></defs>
+  <rect width="560" height="640" fill="url(#bg)"/><circle cx="450" cy="100" r="54" fill="#ffd84d" opacity=".9"/><circle cx="87" cy="165" r="35" fill="none" stroke="#8ebdf1" stroke-width="12"/>
+  <path d="M75 529c46-128 122-190 219-186 105 4 170 70 198 186v111H75z" fill="url(#shirt)"/>
+  <path d="M205 309c15 43 123 44 144 0l-9 86c-29 38-99 38-128 0z" fill="#d79c7c"/>
+  <path d="M179 191c0-80 49-128 111-128 76 0 119 52 111 137l-18 100c-10 59-52 91-100 89-49-2-89-37-96-94z" fill="#eab08d"/>
+  <path d="M174 215C154 105 223 43 297 49c87 7 133 67 103 184-18-69-80-55-131-96-16 45-49 67-95 78z" fill="#25213b"/>
+  <path d="M186 213c-38-13-42 52-8 67l17 3zM393 213c37-13 40 52 6 67l-16 3z" fill="#eab08d"/>
+  <path d="M238 246c12-8 25-8 37 0M323 246c12-8 25-8 37 0" fill="none" stroke="#41344a" stroke-width="6" stroke-linecap="round"/><path d="M279 315c25 17 51 15 70-2" fill="none" stroke="#b95f69" stroke-width="6" stroke-linecap="round"/>
+  <path d="M122 463h315l-33 151H155z" fill="#25233c"/><path d="M122 463h315l-33 151H155z" fill="none" stroke="#4b476a" stroke-width="4"/><circle cx="280" cy="535" r="18" fill="#ffd84d"/><rect x="77" y="612" width="406" height="28" rx="8" fill="#1e1c31"/>
+  <path d="M65 378h76M420 350h77" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/><path d="M101 342v73M459 314v73" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+</svg>

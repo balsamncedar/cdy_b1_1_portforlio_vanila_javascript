@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="아이디어와 기술을 연결하는 백엔드 개발자 포트폴리오"
+    />
+    <title>Suz — Backend & AI Engineer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+    <header class="site-header" id="site-header">
+      <nav class="nav container" aria-label="주요 메뉴">
+        <a class="logo" href="#home" aria-label="Suz 포트폴리오 홈"
+          >Suz<span>.</span></a
+        >
+        <div class="nav-panel" id="nav-panel">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="다크 모드로 전환"
+            title="테마 전환"
+          >
+            <span class="theme-icon" aria-hidden="true">☾</span>
+          </button>
+        </div>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="nav-panel"
+          aria-expanded="false"
+          aria-label="메뉴 열기"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-orb orb-one" aria-hidden="true"></div>
+        <div class="hero-orb orb-two" aria-hidden="true"></div>
+        <div class="container hero-layout">
+          <div class="hero-copy reveal visible">
+            <p class="eyebrow">
+              <span class="status-dot"></span>새로운 기회를 기다리고 있어요
+            </p>
+            <h1 id="hero-title">
+              복잡한 데이터를<br />
+              안정적인 서비스로<br />
+              연결하는
+              <span class="gradient-text typing-text" data-text="백엔드 개발자"
+                >백엔드 개발자</span
+              >입니다.
+            </h1>
+            <p class="hero-description">
+              보이지 않는 곳의 병목을 찾아내고, 효율적인 아키텍처와 AI 모델
+              연동을 통해 탄탄한 시스템을 구축합니다.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#projects"
+                >프로젝트 보기 <span aria-hidden="true">↗</span></a
+              >
+              <a class="button button-secondary" href="#contact"
+                >함께 이야기하기</a
+              >
+            </div>
+            <div class="hero-meta" aria-label="핵심 역량">
+              <span>Seoul, KR</span><span>Backend Engineering</span
+              ><span>Open to work</span>
+            </div>
+          </div>
+          <div class="hero-visual reveal visible" aria-hidden="true">
+            <div class="code-window">
+              <div class="window-bar">
+                <i></i><i></i><i></i><span>portfolio.js</span>
+              </div>
+              <pre><code><b>const</b> developer = {
+  name: <em>'Suzanne'</em>,
+  focus: <em>'Scalable Architecture & AI'</em>,
+  stack: [<em>'Python'</em>, <em>'AWS'</em>, <em>'Docker'</em>, <em>'LangChain'</em>],
+  curious: <strong>true</strong>
+};
+
+developer.<mark>build</mark>(idea);</code></pre>
+            </div>
+            <div class="floating-card card-a">
+              <span>✦</span> Thoughtful Architecture
+            </div>
+            <div class="floating-card card-b"><span>●</span> Clean code</div>
+          </div>
+        </div>
+        <a class="scroll-hint" href="#about" aria-label="소개 섹션으로 이동"
+          ><span></span>SCROLL</a
+        >
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-number">01 / ABOUT</p>
+            <h2 id="about-title">
+              안정적인 서비스는 탄탄한 아키텍처에서<br />시작된다고 믿습니다.
+            </h2>
+          </div>
+          <div class="about-grid">
+            <figure class="profile-frame reveal">
+              <div class="profile-accent" aria-hidden="true"></div>
+              <img
+                src="images/profile.svg"
+                alt="노트북 앞에서 작업하는 개발자 일러스트"
+                width="560"
+                height="640"
+              />
+              <figcaption>Think clearly. Build kindly.</figcaption>
+            </figure>
+            <div class="about-copy reveal">
+              <p class="lead">
+                안녕하세요. 보이지 않는 곳을 튼튼하게 짓는 개발자가 되기 위해
+                걸어온 Suz입니다.
+              </p>
+              <p>
+                기획 의도를 파악하고, 이를 구현하기 위해 데이터베이스를
+                설계하거나 API를 연동하는 과정을 즐깁니다
+              </p>
+              <p>
+                cProfile 같은 툴로 성능을 측정하고 최적화하는 것, 클라우드
+                네이티브 환경(AWS, Docker)과 AI 모델(LLM, RAG)을 서비스에
+                녹여내는 인프라 구축에 관심이 많습니다.
+              </p>
+              <dl class="about-facts">
+                <div>
+                  <dt>경험</dt>
+                  <dd>Web & AI</dd>
+                </div>
+                <div>
+                  <dt>관심사</dt>
+                  <dd>Design System</dd>
+                </div>
+                <div>
+                  <dt>가치</dt>
+                  <dd>Clarity & Care</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section skills"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-number">02 / SKILLS</p>
+            <h2 id="skills-title">
+              아이디어를 실제 경험으로<br />옮기는 도구들입니다.
+            </h2>
+          </div>
+          <div class="skills-grid">
+            <article class="skill-card reveal">
+              <span class="skill-index">01</span>
+              <div class="skill-icon">&lt;/&gt;</div>
+              <h3>Backend & Architecture</h3>
+              <p>
+                Python, RESTful API 구축, 자료구조(Tree 등) 활용 및 성능 최적화.
+              </p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>Data Structure</li>
+                <li>REST API</li>
+                <li>cProfile</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="skill-index">02</span>
+              <div class="skill-icon">◇</div>
+              <h3>AI & Data Pipeline</h3>
+              <p>
+                LangChain과 Vector DB를 활용한 RAG 파이프라인 설계부터,
+                MediaPipe, YOLO 등 컴퓨터 비전 모델을 실제 서비스에 연동하는
+                과정을 다룹니다.
+              </p>
+              <ul class="tag-list">
+                <li>LangChain / RAG</li>
+                <li>ChromaDB</li>
+                <li>MediaPipe</li>
+                <li>YOLO</li>
+              </ul>
+            </article>
+            <article class="skill-card reveal">
+              <span class="skill-index">03</span>
+              <div class="skill-icon">⌘</div>
+              <h3>Cloud & Workflow</h3>
+              <p>
+                AWS EC2와 Docker를 활용한 인프라 환경 구성을 경험했으며,
+                비즈니스 기획과 아키텍처를 꼼꼼히 문서화하여 팀원들과 명확하게
+                소통합니다.
+              </p>
+              <ul class="tag-list">
+                <li>AWS EC2</li>
+                <li>Docker</li>
+                <li>Git / GitHub</li>
+                <li>Documentation</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section projects"
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+        <div class="container">
+          <div class="projects-head reveal">
+            <div class="section-heading compact">
+              <p class="section-number">03 / PROJECTS</p>
+              <h2 id="projects-title">코드로 완성한<br />최근 프로젝트</h2>
+            </div>
+            <p>
+              GitHub에서 공개 저장소를 실시간으로 불러옵니다. 언어별로 골라
+              살펴보세요.
+            </p>
+          </div>
+          <div
+            class="filter-bar reveal"
+            id="project-filters"
+            aria-label="프로젝트 언어 필터"
+          ></div>
+          <div
+            class="project-status"
+            id="project-status"
+            role="status"
+            aria-live="polite"
+          ></div>
+          <div class="project-grid" id="project-grid"></div>
+        </div>
+      </section>
+
+      <section
+        class="section contact"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="container contact-layout">
+          <div class="contact-copy reveal">
+            <p class="section-number">04 / CONTACT</p>
+            <h2 id="contact-title">재미있는 아이디어가<br />있으신가요?</h2>
+            <p>
+              프로젝트 협업, 커피챗, 혹은 가벼운 인사도 좋습니다. 메시지를
+              남겨주시면 확인 후 답변드릴게요.
+            </p>
+            <a class="email-link" href="mailto:hello@example.com"
+              >balsamncedar5@gmail.com <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <form class="contact-form reveal" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">이름 <span>*</span></label
+                ><input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="성함을 알려주세요"
+                  required
+                /><small class="error" id="name-error"></small>
+              </div>
+              <div class="field">
+                <label for="email">이메일 <span>*</span></label
+                ><input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                /><small class="error" id="email-error"></small>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">메시지 <span>*</span></label
+              ><textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="어떤 이야기를 나누고 싶으신가요?"
+                required
+              ></textarea
+              ><small class="error" id="message-error"></small>
+            </div>
+            <button class="button button-primary submit-button" type="submit">
+              메시지 보내기 <span aria-hidden="true">↗</span>
+            </button>
+            <p
+              class="form-result"
+              id="form-result"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a class="logo" href="#home">Suz<span>.</span></a>
+        <p>© <span id="year"></span> Suz. Crafted with clarity & care.</p>
+        <div class="social-links">
+          <a href="https://github.com" target="_blank" rel="noreferrer"
+            >GitHub</a
+          ><a href="https://www.linkedin.com" target="_blank" rel="noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </footer>
+    <button class="scroll-top" type="button" aria-label="페이지 맨 위로 이동">
+      ↑
+    </button>
+  </body>
+</html>

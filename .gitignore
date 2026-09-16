@@ -1,0 +1,5 @@
+# 1. 운영체제 자동 생성 파일 (Mac / Windows)
+.DS_Store
+
+# 2. 로그 파일
+*.log

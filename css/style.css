@@ -17,6 +17,14 @@
   --danger: #d8475f;
   --shadow: 0 24px 70px rgba(78, 72, 146, 0.13);
   --radius: 24px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 28px;
+  --space-xl: 40px;
+  --space-2xl: 60px;
+  --space-3xl: 90px;
+  --space-grid: 22px;
   --header-height: 68px;
   --font-body: "Manrope", "Noto Sans KR", sans-serif;
   --font-ko: "Noto Sans KR", sans-serif;
@@ -157,7 +165,7 @@ ul {
 .nav-links {
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: var(--space-md);
 }
 
 .nav-links a {
@@ -252,7 +260,7 @@ ul {
   inset: var(--header-height) 0 auto;
   flex-direction: column;
   align-items: stretch;
-  padding: 25px 28px 28px;
+  padding: 25px var(--space-lg) var(--space-lg);
   background: var(--surface);
   border-bottom: 1px solid var(--line);
   box-shadow: var(--shadow);
@@ -371,7 +379,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 12px;
+  gap: var(--space-sm);
   margin: 36px 0 46px;
 }
 
@@ -379,7 +387,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: var(--space-sm);
   width: 100%;
   min-height: 52px;
   padding: 0 24px;
@@ -417,7 +425,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 7px 12px;
+  gap: 7px var(--space-sm);
   color: var(--muted);
   font-size: 12px;
   font-weight: 600;
@@ -480,7 +488,7 @@ h1 {
 
 .code-window pre {
   margin: 0;
-  padding: 28px 22px;
+  padding: var(--space-lg) 22px;
   font-size: 12px;
   line-height: 2;
 }
@@ -508,7 +516,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 10px var(--space-sm);
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -556,7 +564,7 @@ h1 {
   display: block;
   width: 3px;
   height: 7px;
-  margin: 8px auto;
+  margin: var(--space-xs) auto;
   background: var(--primary);
   border-radius: 3px;
   animation: scroll 1.8s infinite;
@@ -589,7 +597,7 @@ h1 {
    Shared Section Styles
 ======================================== */
 .section {
-  padding: 90px 0;
+  padding: var(--space-3xl) 0;
 }
 
 .section-heading {
@@ -686,9 +694,9 @@ h1 {
 .about-facts {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
+  gap: var(--space-sm);
   margin: 38px 0 0;
-  padding-top: 28px;
+  padding-top: var(--space-lg);
   border-top: 1px solid var(--line);
 }
 
@@ -718,7 +726,7 @@ h1 {
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 22px;
+  gap: var(--space-grid);
 }
 
 .skill-card {
@@ -800,7 +808,7 @@ h1 {
   display: block;
   align-items: flex-end;
   justify-content: space-between;
-  gap: 60px;
+  gap: var(--space-2xl);
 }
 
 .projects-head > p {
@@ -844,7 +852,7 @@ h1 {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
-  gap: 22px;
+  gap: var(--space-grid);
 }
 
 .project-card {
@@ -943,7 +951,7 @@ h1 {
   display: grid;
   place-items: center;
   min-height: 250px;
-  padding: 40px;
+  padding: var(--space-xl);
   border: 1px dashed var(--line);
   border-radius: var(--radius);
   text-align: center;
@@ -951,7 +959,7 @@ h1 {
 }
 
 .state-box p {
-  margin: 12px 0 18px;
+  margin: var(--space-sm) 0 18px;
 }
 
 .spinner {
@@ -1015,7 +1023,7 @@ h1 {
 
 .email-link {
   display: inline-flex;
-  gap: 12px;
+  gap: var(--space-sm);
   margin-top: 25px;
   padding-bottom: 5px;
   border-bottom: 1px solid #807aa1;
@@ -1027,7 +1035,7 @@ h1 {
 }
 
 .contact-form {
-  padding: 25px 20px;
+  padding: 25px var(--space-md);
   border: 1px solid #45415f;
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.055);
@@ -1046,7 +1054,7 @@ h1 {
 
 .field label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: var(--space-xs);
   color: #dedbea;
   font-size: 12px;
   font-weight: 600;
@@ -1127,8 +1135,8 @@ h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
-  padding: 28px 0;
+  gap: var(--space-md);
+  padding: var(--space-lg) 0;
 }
 
 .footer p {
@@ -1300,7 +1308,7 @@ h1 {
   }
 
   .hero-meta {
-    gap: 16px 28px;
+    gap: 16px var(--space-lg);
   }
 
   .hero-visual {
@@ -1348,7 +1356,7 @@ h1 {
 
   .about-grid {
     grid-template-columns: 0.85fr 1.15fr;
-    gap: 60px;
+    gap: var(--space-2xl);
   }
 
   .profile-frame {
@@ -1367,7 +1375,7 @@ h1 {
 
   .about-facts {
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: var(--space-md);
   }
 
   .skills-grid {
@@ -1387,7 +1395,7 @@ h1 {
   }
 
   .filter-bar {
-    gap: 8px;
+    gap: var(--space-xs);
   }
 
   .contact-layout {
@@ -1427,7 +1435,7 @@ h1 {
   }
 
   .contact-layout {
-    gap: 90px;
+    gap: var(--space-3xl);
   }
 }
 

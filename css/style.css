@@ -15,6 +15,7 @@
   --blue: #8fc8ff;
   --yellow: #ffd84d;
   --danger: #d8475f;
+  --shadow-soft: 0 8px 30px rgba(78, 72, 146, 0.08);
   --shadow: 0 24px 70px rgba(78, 72, 146, 0.13);
   --radius: 24px;
   --space-xs: 8px;
@@ -42,6 +43,7 @@
   --blue: #629cd8;
   --yellow: #ffdb57;
   --danger: #ff7c91;
+  --shadow-soft: 0 8px 30px rgba(0, 0, 0, 0.18);
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
 }
 
@@ -863,6 +865,7 @@ h1 {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--bg);
+  box-shadow: var(--shadow-soft);
   transition:
     transform 0.3s,
     box-shadow 0.3s;

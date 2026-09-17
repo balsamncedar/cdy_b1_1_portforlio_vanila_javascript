@@ -34,7 +34,9 @@ python -m http.server 5500
 
 ## GitHub API 설정
 
-GitHub Pages(`{username}.github.io`)에서 실행하면 호스트 이름에서 사용자명을 자동으로 가져옵니다. 로컬 개발 환경에서는 `js/app.js`의 `githubUsername` fallback 값인 `octocat`을 사용합니다. 원하는 계정으로 고정하려면 해당 fallback 문자열을 변경하세요.
+GitHub Pages 환경에서는 호스트 이름에서 GitHub 사용자명을 자동으로 가져옵니다.
+로컬 환경에서는 API 연동 전에도 프로젝트 카드 UI를 확인할 수 있도록
+`octocat` 저장소를 fallback 샘플 데이터로 사용합니다.
 
 인증 없는 GitHub API는 시간당 호출 횟수가 제한되며, 403을 포함한 실패 응답은 오류 UI와 다시 시도 버튼으로 처리됩니다.
 

@@ -159,17 +159,100 @@ const validateField = (field) => {
   return !message;
 };
 
-const handleSubmit = (event) => {
+/* [start] contact form handling -  */
+
+const EMAIL_CONFIG = {
+  publicKey: 'ThNVnIep_8FohEif6', 
+  serviceId: 'service_w5sxktq',
+  templateId: 'template_ddn9fkl'
+};
+
+let isSubmitting = false;
+
+const handleSubmit = async (event) => {
   event.preventDefault();
-  const fields = [...elements.form.querySelectorAll('input, textarea')];
+
+  // 버튼 클릭과 Enter 입력으로 인한 중복 제출 방지
+  if (isSubmitting) return;
+
+  const form = event.currentTarget;
+  const fields = [...form.querySelectorAll('input, textarea')];
+  const button = form.querySelector('[type="submit"]');
+  const result = elements.formResult;
+
+  result.classList.remove('success');
+  result.textContent = '';
+
+  // map으로 모든 필드를 검사한 다음 결과를 판단
   const isValid = fields.map(validateField).every(Boolean);
-  elements.formResult.classList.toggle('success', isValid);
-  elements.formResult.textContent = isValid ? '메시지가 안전하게 접수되었습니다. 곧 답변드릴게요! ✦' : '입력 내용을 다시 확인해 주세요.';
-  if (isValid) {
-    elements.form.reset();
-    fields.forEach((field) => field.classList.remove('invalid'));
+
+  if (!isValid) {
+    result.textContent = '입력 내용을 다시 확인해 주세요.';
+    fields.find((field) => field.classList.contains('invalid'))?.focus();
+    return;
+  }
+
+  // SDK 로딩 실패가 다른 페이지 기능까지 멈추게 하지 않음
+  if (!window.emailjs) {
+    result.textContent =
+      '메일 전송 기능을 불러오지 못했습니다. 새로고침 후 다시 시도해 주세요.';
+    return;
+  }
+
+  const originalButtonHTML = button.innerHTML;
+
+  isSubmitting = true;
+  button.disabled = true;
+  button.textContent = '전송 중…';
+
+  // 전송 중 작성한 내용이 성공 후 reset으로 지워지는 상황 방지
+  fields.forEach((field) => {
+    field.readOnly = true;
+  });
+
+  result.textContent = '메시지를 전송하고 있습니다.';
+
+  try {
+    await window.emailjs.sendForm(
+      EMAIL_CONFIG.serviceId,
+      EMAIL_CONFIG.templateId,
+      form,
+      {
+        publicKey: EMAIL_CONFIG.publicKey,
+        limitRate: { throttle: 10000 }
+      }
+    );
+
+    result.classList.add('success');
+    result.textContent = '메시지가 전송되었습니다. 감사합니다!';
+
+    // 성공 응답을 받은 경우에만 입력값 삭제
+    form.reset();
+
+    fields.forEach((field) => {
+      field.classList.remove('invalid');
+      field.removeAttribute('aria-invalid');
+    });
+  } catch (error) {
+    console.error('EmailJS 전송 실패:', error);
+
+    result.textContent = error?.status === 429
+      ? '요청이 너무 빠르거나 전송 한도에 도달했습니다. 잠시 후 다시 시도해 주세요.'
+      : '전송하지 못했습니다. 입력 내용은 유지되니 잠시 후 다시 시도해 주세요.';
+  } finally {
+    isSubmitting = false;
+    button.disabled = false;
+    button.innerHTML = originalButtonHTML;
+
+    fields.forEach((field) => {
+      field.readOnly = false;
+    });
   }
 };
+
+/* [end] contact form handling -  */
+
+
 
 const handleScroll = () => {
   const scrollY = window.scrollY;

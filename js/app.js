@@ -109,7 +109,7 @@ const renderProjectState = () => {
   elements.projectGrid.innerHTML = filteredProjects.map(({ name, description, html_url: url, language, stargazers_count: stars, forks_count: forks }) => `
     <article class="project-card">
       <div class="project-top"><span class="folder-icon" aria-hidden="true">⌑</span><a class="project-link" href="${escapeHtml(url)}" target="_blank" rel="noreferrer" aria-label="${escapeHtml(name)} GitHub 저장소 열기">↗</a></div>
-      <h3>${escapeHtml(name)}</h3>
+      <h3 class="truncate-text">${escapeHtml(name)}</h3>
       <p>${escapeHtml(description || '설명이 등록되지 않은 프로젝트입니다.')}</p>
       <div class="project-meta"><span class="language">${escapeHtml(language || 'Other')}</span><span>★ ${stars}</span><span>⑂ ${forks}</span></div>
     </article>`).join('');
